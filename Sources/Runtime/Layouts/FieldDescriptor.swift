@@ -60,7 +60,7 @@ struct FieldRecord {
     mutating func type(genericContext: UnsafeRawPointer?,
                        genericArguments: UnsafeRawPointer?) -> Any.Type {
         let typeName = _mangledTypeName.advanced()
-        let metadataPtr = swift_getTypeByMangledNameInContext(
+        let metadataPtr = cruntime_getTypeByMangledNameInContext(
             typeName,
             getSymbolicMangledNameLength(typeName),
             genericContext,

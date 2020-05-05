@@ -3,8 +3,7 @@
 
 #include <stddef.h>
 
-__attribute__((swiftcall))
-const void * _Nullable swift_getTypeByMangledNameInContext(
+const void * _Nullable cruntime_getTypeByMangledNameInContext(
                         const char * _Nullable typeNameStart,
                         size_t typeNameLength,
                         const void * _Nullable context,
